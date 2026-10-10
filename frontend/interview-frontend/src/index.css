@@ -1,0 +1,306 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #202338;
+  background: #f7f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 7%;
+  background: white;
+  border-bottom: 1px solid #e9eaf2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #202338;
+  font-weight: 800;
+}
+
+.brand-icon, .profile-avatar {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #6d5dfc;
+  color: white;
+  font-weight: 800;
+}
+
+.nav-links { display: flex; gap: 24px; }
+
+.nav-links a {
+  text-decoration: none;
+  color: #777b8d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-links a.active { color: #6d5dfc; }
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e9e5ff;
+  color: #6552e9;
+}
+
+.page { max-width: 1120px; margin: auto; padding: 54px 28px; }
+
+.welcome {
+  padding: 36px;
+  border-radius: 22px;
+  background: linear-gradient(115deg, #eeebff, #faf9ff);
+  border: 1px solid #e4dfff;
+}
+
+.eyebrow {
+  color: #6d5dfc;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -1.5px; line-height: 1.2; }
+.welcome h1 { max-width: 570px; margin: 18px 0 12px; }
+
+.welcome p, .section-heading p, .track-card p, .interview-panel > p {
+  color: #777b8d;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.primary-btn, .secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary-btn { background: #6d5dfc; color: white; }
+.primary-btn:hover { background: #5745eb; }
+.secondary-btn { background: #f0f1f7; color: #50546a; }
+
+.welcome .primary-btn { margin-top: 12px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 28px 0 42px;
+}
+
+.stat-card, .track-card {
+  background: white;
+  border: 1px solid #e9eaf2;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.stat-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.purple { background: #eeeaff; color: #6d5dfc; }
+.blue { background: #e5f3ff; color: #3489db; }
+.orange { background: #fff0e2; color: #dd852e; }
+
+.stat-card > p { color: #777b8d; font-size: 12px; }
+.stat-card h2 { margin: 10px 0; font-size: 27px; }
+.stat-card small { color: #9b9eae; font-size: 10px; }
+
+.section-heading { margin-bottom: 20px; }
+.section-heading h2 { margin-bottom: 6px; font-size: 22px; }
+.section-heading p { margin-top: 0; }
+
+.tracks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.track-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  color: #6d5dfc;
+  background: #f0edff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.track-card h3 { font-size: 15px; margin-top: 22px; }
+.track-card p { min-height: 70px; }
+
+.text-btn, .back-btn {
+  border: 0;
+  padding: 8px 0;
+  background: none;
+  color: #6d5dfc;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.interview-page, .results-page { max-width: 800px; }
+
+.interview-panel, .results-panel {
+  margin-top: 20px;
+  background: white;
+  border: 1px solid #e9eaf2;
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.interview-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.question-count { color: #777b8d; font-size: 12px; }
+.interview-panel h1 { font-size: 26px; }
+
+.progress-track {
+  height: 6px;
+  margin: 24px 0;
+  border-radius: 10px;
+  background: #eeeefa;
+  overflow: hidden;
+}
+
+.progress-track > div {
+  height: 100%;
+  background: #6d5dfc;
+  transition: width .2s;
+}
+
+.interview-panel h2 { font-size: 22px; }
+
+.interview-panel label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 24px 0 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dedfeb;
+  border-radius: 12px;
+  resize: vertical;
+  outline: none;
+  line-height: 1.7;
+}
+
+textarea:focus { border-color: #6d5dfc; }
+
+.interview-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.result-check {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #e0f7ec;
+  color: #16865d;
+  font-size: 24px;
+}
+
+.result-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.result-stats > div {
+  padding: 20px;
+  border-radius: 12px;
+  background: #f5f3ff;
+}
+
+.result-stats strong, .result-stats span { display: block; }
+.result-stats strong { font-size: 28px; color: #6d5dfc; }
+.result-stats span { margin-top: 8px; color: #777b8d; font-size: 11px; }
+
+.answer-card {
+  padding: 14px 0;
+  border-bottom: 1px solid #e9eaf2;
+}
+
+.answer-card h3 { font-size: 13px; }
+.answer-card p { color: #777b8d; font-size: 13px; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.disclaimer { color: #9699aa; font-size: 11px; margin: 24px 0; }
+
+@media (max-width: 700px) {
+  .navbar { padding: 14px 18px; gap: 12px; }
+  .nav-links { gap: 12px; }
+  .profile > span:last-child { display: none; }
+  .page { padding: 28px 16px; }
+  .welcome { padding: 24px; }
+  .stats, .tracks { grid-template-columns: 1fr; }
+  .track-card p { min-height: auto; }
+  .interview-panel, .results-panel { padding: 22px; }
+}
+
+@media (max-width: 420px) {
+  .brand { font-size: 14px; }
+  .brand-icon { width: 32px; height: 32px; }
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 11px; }
+  .interview-actions { flex-direction: column-reverse; }
+}
